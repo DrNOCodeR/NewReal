@@ -1,7 +1,6 @@
 from tkinter import *
 import tkinter as tk
 from pygame import mixer
-from tkinter import ttk
 
 root = tk.Tk()
 root['bg']='#556642'
