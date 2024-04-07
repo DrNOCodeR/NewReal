@@ -908,21 +908,18 @@ def north():
 background = Label(root, image=a, highlightthickness=0)
 background.place(x=0, y=0, relwidth=1, relheight=1)
 
-p=Text(font=("Arial", 20),foreground="#e1e3e2",background="#556642",width=70,height=7)
+p=Text(font=("Arial", 20),foreground="#e1e3e2",background="#556642",width=75,height=7)
 p.insert(1.0, 'Вы проснулись в лесу. У вас очень сильно болит голова, ничего не помните, что произошло. Вы осматриваете лес. Вокруг высокие деревья, кусты, цветочки, огромная часть территории, покрытая свежей травой, на которой видна утренняя роса. Солнечные зайчики падают на деревья. Все выглядит так красиво, но вы понимаете, что нужно выбираться отсюда, ведь неизвестно что может произойти ночью, может здесь ведутся волки или может что-еще хуже...')
-p.grid(row=1,column=4)
-
-la = ttk.Label(text="                                                                      ",background="white")
-la.grid(row=0,column=3)
+p.grid(row=1,column=4,padx = "135")
 
 z = tk.Label(root, image=e)
 z.grid(row=1, column=1, rowspan=10)
 z.grid_remove()
 
 button1 = Button(root,text="Идти по ближайшей тропинке",font='arial 16',height=2,width=30,bg="#556642",fg="#e1e3e2",border=10,command=tropinka)
-button1.grid(row=11,column=1)
+button1.grid(row=11,column=1,pady = "10")
 button2 = Button(root,text="Идти на север, ориентируясь по мху \nна деревьях и по солнцу",font='arial 16',height=2,width=30,fg="#e1e3e2",bg="#556642",border=10,command=north)
-button2.grid(row=12,column=1)
+button2.grid(row=12,column=1,pady = "10")
 mixer.init()
 mixer.music.load('nature.mp3')
 mixer.music.play()
