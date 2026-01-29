@@ -907,7 +907,10 @@ def north():
 background = Label(root, image=a, highlightthickness=0)
 background.place(x=0, y=0, relwidth=1, relheight=1)
 
-p=Text(font=("Arial", 20),foreground="#e1e3e2",background="#556642",width=75,height=7)
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+
+p=Text(font=("Arial", 20),foreground="#e1e3e2",background="#556642",width=round(screen_width * 0.035),height=round(screen_height * 0.02))
 p.insert(1.0, 'Вы проснулись в лесу. У вас очень сильно болит голова, ничего не помните, что произошло. Вы осматриваете лес. Вокруг высокие деревья, кусты, цветочки, огромная часть территории, покрытая свежей травой, на которой видна утренняя роса. Солнечные зайчики падают на деревья. Все выглядит так красиво, но вы понимаете, что нужно выбираться отсюда, ведь неизвестно что может произойти ночью, может здесь ведутся волки или может что-еще хуже...')
 p.grid(row=1,column=4,padx = "135")
 
